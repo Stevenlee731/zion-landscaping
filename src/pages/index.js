@@ -3,15 +3,10 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-const FullWidthImg = styled(Img)`
-  grid-column: 1/-1 !important;
-
-`
-
 const IndexPage = ({data}) => (
   <React.Fragment>
-    <FullWidthImg sizes={data.background.sizes} />
-    <p>Now go build something great.</p>
+    <Img sizes={data.background.sizes} />
+    <p>Zion Landscaping</p>
     <Link to="/services/">Go to page 2</Link>
   </React.Fragment>
 )
