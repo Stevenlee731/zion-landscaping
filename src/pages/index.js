@@ -26,7 +26,7 @@ export const query = graphql`
         desc
       }
     }
-    background: imageSharp(id: {regex: "/zion-test.jpg/"}) {
+    background: imageSharp(id: {regex: "/zion-banner.jpg/"}) {
       sizes(maxWidth: 1280) {
         ... GatsbyImageSharpSizes
       }
