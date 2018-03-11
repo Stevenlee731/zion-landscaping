@@ -44,15 +44,19 @@ const StyledEmail = styled.div`
     grid-area: email;
 `
 
-const StyledSocial = styled.div`
+const RightNav = styled.div`
+  margin: 0 1rem;
+`
+
+const StyledSocial = styled(RightNav)`
     grid-area: social;
 `
 
-const StyledQuote = styled.div`
+const StyledQuote = styled(RightNav)`
     grid-area: quote;
 `
 
-const StyledPhone = styled.div`
+const StyledPhone = styled(RightNav)`
     grid-area: phone;
 `
 

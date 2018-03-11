@@ -21,7 +21,6 @@ const StyledTemplate = styled.div`
 const StyledContent = styled.div`
   grid-area: content;
   display: grid;
-  grid-template-columns: 250px 1fr 250px;
 `
 
 const TemplateWrapper = ({ data, children }) => (
@@ -47,18 +46,18 @@ TemplateWrapper.propTypes = {
 
 export default TemplateWrapper
 
-export const query = graphql`
-  query SiteMeta {
-    site {
-      siteMetadata {
-        title
-        desc
-      }
-    }
-    zionLogo: imageSharp(id: {regex: "/Zion.jpg/"}) {
-      sizes(maxWidth: 200) {
-        ... GatsbyImageSharpSizes
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query SiteMeta {
+//     site {
+//       siteMetadata {
+//         title
+//         desc
+//       }
+//     }
+//     zionLogo: imageSharp(id: {regex: "/Zion.jpg/"}) {
+//       sizes(maxWidth: 200) {
+//         ... GatsbyImageSharpSizes
+//       }
+//     }
+//   }
+// `
