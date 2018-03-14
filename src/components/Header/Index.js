@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
   grid-area: header;
   width: 100vw;
 
-  grid-template-columns: 250px 1fr 250px;
+  grid-template-columns: 1fr 1280px 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: 
     ". top-bar ."

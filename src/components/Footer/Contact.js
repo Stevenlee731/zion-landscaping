@@ -15,7 +15,15 @@ const ContactHeader = styled.div`
 
 const ContactUs = () => (
     <StyledContact>
-        Contact
+        <form 
+            name="contact" 
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+        >
+            <input type="text" placeholder="Your Name" name="name"/>
+            <button>Send</button>
+        </form>
     </StyledContact>
 )
 

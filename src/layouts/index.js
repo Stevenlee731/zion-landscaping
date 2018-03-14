@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Header from '../components/Header/Index'
-import Footer from '../components/Footer/Index.js'
+import Footer from '../components/Footer/Index'
 import './index.css'
 
 const StyledTemplate = styled.div`
