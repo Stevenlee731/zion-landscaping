@@ -1,34 +1,18 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import logo from '../../images/ZionLandscaping.svg'
-
-const Logo = styled.img`
-    grid-area: logo;
-    background-color: white;
-    margin: 1rem 0;
-    justify-self: center;
-    max-width: 50%;
-`
 
 const Summary = styled.div`
     grid-area: summary;
     margin: 1rem 0;
 `
 
-const Contact = styled(Link)`
-    grid-area: contact;
-    border-radius: 2px;
-    border-color: #21a700;
-    background-color: #7aba1e;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    widtH: 100%;
-    color: white;
-    height: 100%;
-    text-transform: uppercase;
-    text-decoration: none;
+const ContactHeader = styled.h2`
+    margin: 0;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    grid-column: 1/-1;
+    border-bottom: 1px solid grey;
 `
 
 const StyledAbout = styled.div`
@@ -53,13 +37,12 @@ const StyledAbout = styled.div`
 
 const About = () => (
     <StyledAbout>
-        <Logo src={logo} alt="Zion Landscaping"/>
+        <ContactHeader>
+            About Zion
+        </ContactHeader>
         <Summary>
         Since 1989, Zion Landscaping Inc. has been a licensed landscape contractor that delivers effective and successful landscape design and construction. For decades, we have been serving our clients in developing long-term projects and design throughout Orange County and Los Angeles.
         </Summary>
-        <Contact to="/contact">
-            Contact Us
-        </Contact>
     </StyledAbout>
 )
 

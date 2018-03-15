@@ -79,7 +79,7 @@ const BottomButton = styled(Link)`
 
     :hover {
         color: #7aba1e;
-        border-bottom: 2px solid #7aba1e;
+        border-bottom: 4px solid #7aba1e;
     }
 `
 

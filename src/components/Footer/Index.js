@@ -64,6 +64,7 @@ const StyledFooter = styled.footer`
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
       "footer-about footer-services footer-contact";
+    grid-template-rows: minmax(300px, 350px);
   `
 
 const Footer = () => (

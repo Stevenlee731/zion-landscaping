@@ -6,14 +6,15 @@ const StyledServices = styled.div`
     grid-area: footer-services;
     padding: 1rem;
     display: grid;
-    align-content: space-around;
+    align-content: flex-start;
     align-items: start;
     grid-template-rows: 1.5fr repeat(auto, 1fr);
     margin: 0 1rem;
 `
 
 const ServiceChild = styled.li`
-    margin: 1rem 0 1rem 1rem;
+    margin-top: 1rem;
+    list-style: none;
 
     a {
         color: white;
@@ -25,10 +26,14 @@ const ServiceChild = styled.li`
     }
 `
 
-const ServiceHeader = styled.div`
-    margin: 1rem 0;
+const ServiceHeader = styled.h2`
+    margin: 0;
+    padding-bottom: 1rem;
     font-size: 2rem;
+    grid-column: 1/-1;
+    border-bottom: 1px solid grey;
 `
+
 
 
 const Services = () => (
