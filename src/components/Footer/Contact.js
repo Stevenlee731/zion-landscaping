@@ -51,13 +51,13 @@ const ContactUs = () => (
             data-netlify="true"
             data-netlify-honeypot="bot-field"
         >
-            <label for="name">
+            <label htmlFor="name">
                 Name: <input type="text" id="name"></input>
             </label>
-            <label for="email">
+            <label htmlFor="email">
                 Email: <input type="text" id="email"></input>
             </label>
-            <StyledTextArea name="textarea" rows="6" cols="50">Write something here</StyledTextArea>
+            <StyledTextArea name="description" defaultValue="This is a description."></StyledTextArea>
             <ContactButton>Send</ContactButton>
         </StyledForm>
     </StyledContact>

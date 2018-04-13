@@ -21,10 +21,10 @@ const StyledTemplate = styled.div`
 const StyledContent = styled.div`
   grid-area: content;
   display: grid;
-  grid-template-columns: 2fr 12fr 2fr;
+  grid-template-columns: 2fr 6fr 6fr 2fr;
   grid-template-rows: min-content;
   grid-template-areas:
-    "banner banner banner";
+    "banner banner banner banner";
 `
 
 const TemplateWrapper = ({ data, children }) => (
