@@ -1,10 +1,9 @@
-import React from 'react'
+import React, {Component} from 'react'
 import styled from 'styled-components'
 import SwipeableViews from 'react-swipeable-views';
 import { virtualize, autoPlay } from 'react-swipeable-views-utils';
 import Img from 'gatsby-image'
-
-
+import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 
 function textAlignment ({ alignment }) {
     let $alignment;
@@ -16,7 +15,7 @@ function textAlignment ({ alignment }) {
     return `text-align: ${$alignment}`;
 }
 
-function positionAlignment ({ position, isCSS }) {
+export function positionAlignment ({ position, isCSS }) {
     let $position;
     if (position === "full") $position = "2 / span 2";
     else if (position === "left") $position = "2 / span 1";
@@ -52,7 +51,7 @@ export const Overlay = styled.div`
     grid-area: banner;
     z-index: 4;
     position: relative;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.3);
 `
 
 export const Divider = styled.hr`
@@ -71,75 +70,36 @@ export const MaskHeader = styled.h1`
     color: white;
 `
 
+const ServiceList = styled.ul`
+  list-style-type: none;
+  text-align: center;
+  padding: 0; 
+`
 
-const AutoPlaySwipe = autoPlay(SwipeableViews)
 
-const styles = {
-    slide: {
-      padding: 15,
-      minHeight: 300,
-      color: '#fff',
-    },
-    slide1: {
-      background: '#FEA900',
-    },
-    slide2: {
-      background: '#B3DC4A',
-    },
-    slide3: {
-      background: '#6AC0FF',
-    },
-  };
-  
-const Gallery = (props) => {
-
-    return (
-    <AutoPlaySwipe interval={400000} enableMouseEvents={true} >
-        
-        <div style={Object.assign({}, styles.slide, styles.slide1)}>
-        slide n°1
-        </div>
-        <div style={Object.assign({}, styles.slide, styles.slide2)}>
-        slide n°2
-        </div>
-        <div style={Object.assign({}, styles.slide, styles.slide3)}>
-        slide n°3
-        </div>
-    </AutoPlaySwipe>
-    )
-};
-
-export const GalleryContainer = props => {
-  let x = {color: "black"}
-  const style = Object.assign({}, positionAlignment(props), x)
-
-  return (
-    <div style={style}>
-      <HeaderTwo alignment="center">
-        Check Out Our Work
-      </HeaderTwo>
-      <Gallery images={props.sizes} />
-    </div>
-  )
-}
 
 export const ServiceContainer = () => (
-  <div>
-          <HeaderTwo alignment="center">
-        Our Services
-      </HeaderTwo>
-      <ul>
-        <li>Innovative Landscape Design</li>
-        <li>3D Design Consultation</li>
-        <li>Luxury Swimming Pools & Spas</li>
-        <li>Custom Concrete or Stone Decking</li>
-        <li>Custom Masonry Work</li>
-        <li>Built-In Barbecues</li>
-        <li>Outdoor Fireplaces</li>
-        <li>Waterfalls, Fountains & Rock Design</li>
-        <li>Patio Covers</li>
-        <li>Premium Trex Decking</li>
-        <li>Professional Plant Designers</li>
-      </ul>
-    </div>
+  <StyledContainer>
+    <HeaderTwo alignment="center">
+      Our Services
+    </HeaderTwo>
+    <ServiceList>
+      <li>Innovative Landscape Design</li>
+      <li>3D Design Consultation</li>
+      <li>Luxury Swimming Pools & Spas</li>
+      <li>Custom Concrete or Stone Decking</li>
+      <li>Custom Masonry Work</li>
+      <li>Built-In Barbecues</li>
+      <li>Outdoor Fireplaces</li>
+      <li>Waterfalls, Fountains & Rock Design</li>
+      <li>Patio Covers</li>
+      <li>Premium Trex Decking</li>
+      <li>Professional Plant Designers</li>
+    </ServiceList>
+  </StyledContainer>
 )
+
+export const StyledContainer = styled.div`
+  ${positionAlignment};
+  ${textAlignment};
+`

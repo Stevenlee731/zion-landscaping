@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import logo from '../../images/ZionLandscaping.svg'
+import logo from '../../images/zion-logo.png'
 
 const StyledHeader = styled.header`
   display: grid;
@@ -108,7 +108,7 @@ const StyledContact = styled(BottomButton)`
 `
 
 const Logo = styled.img`
-    max-width: 75px;
+    max-height: 40px;
 `
 
 const TopBar = () => (

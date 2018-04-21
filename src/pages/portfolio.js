@@ -1,6 +1,11 @@
 import React, {Component, Fragment} from 'react'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
+import {
+    Paragraph, Overlay, Divider, HeaderOne, MaskHeader, HeaderTwo, ServiceContainer
+  } from './../utils/ArticleComponents.js'
 import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
+import { GridGallery } from './../components/GridGallery.js'
 
 class Portfolio extends Component {
   
@@ -8,45 +13,13 @@ class Portfolio extends Component {
     gallery: []
   }
 
-  async componentDidMount() {
-    try {
-      const res = await fetch('https://res.cloudinary.com/stevelee/image/list/front-yard.json')
-      const gallery = await res.json()
-      this.setState({gallery: gallery.resources})
-    }
-    catch(error) {
-      console.log(error)
-    }
-  }
-
   render() {
     return (
       <Fragment>
-        <h1>Porfolio</h1>
-          <CloudinaryContext cloudName="CLOUDNAME">
-              {
-                  this.state.gallery.map(data => {
-                      return (
-                          <div className="responsive" key={data.public_id}>
-                              <div className="img">
-                                  <a target="_blank" href={`https://res.cloudinary.com/christekh/image/upload/${data.public_id}.jpg`}>
-                                      <Image publicId={data.public_id}>
-                                          <Transformation
-                                              crop="scale"
-                                              width="300"
-                                              height="200"
-                                              dpr="auto"
-                                              responsive_placeholder="blank"
-                                          />
-                                      </Image>
-                                  </a>
-                                  <div className="desc">Created at {data.created_at}</div>
-                              </div>
-                          </div>
-                      )
-                  })
-              }
-          </CloudinaryContext>
+        <Overlay/>
+        <Img outerWrapperClassName="grid-banner" style={{ maxHeight: "400px", gridColumn: "1/-1" }} sizes={this.props.data.background.sizes} />
+        <HeaderTwo alignment="center" position="center">Porfolio</HeaderTwo>
+          <GridGallery/>
       </Fragment>
     )
   }
@@ -54,3 +27,12 @@ class Portfolio extends Component {
 
 export default Portfolio
 
+export const query = graphql`
+  query PortfolioQuery {
+    background: imageSharp(id: {regex: "/portfolio-banner.jpg/"}) {
+      sizes(maxWidth: 1280) {
+        ... GatsbyImageSharpSizes
+      }
+    }
+  }
+`

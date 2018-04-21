@@ -349,3 +349,8 @@ template {
 .grid-banner {
   grid-area: banner;
 }
+
+
+.gallery__image:hover .gallery__overlay {
+  transform: translateY(0);
+}
