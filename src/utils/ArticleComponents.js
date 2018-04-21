@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import SwipeableViews from 'react-swipeable-views';
-import { virtualize, autoPlay } from 'react-swipeable-views-utils';
 import Img from 'gatsby-image'
 import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 
