@@ -6,7 +6,6 @@ import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 import {
   Paragraph, Overlay, Divider, HeaderOne, MaskHeader, HeaderTwo, ServiceContainer
 } from './../utils/ArticleComponents.js';
-import { GalleryContainer } from './../utils/Gallery.js';
 
 class IndexPage extends Component {
   constructor(props) {

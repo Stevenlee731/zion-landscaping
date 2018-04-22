@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
+import 'regenerator-runtime/runtime';
 
 const PhotoViewer = styled.div`
     display: grid;
