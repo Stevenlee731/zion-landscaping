@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "babel-plugin-transform-regenerator": "^6.26.0",
     "cloudinary-react": "^1.0.6",
     "gatsby": "^1.9.158",
     "gatsby-image": "^1.0.41",
