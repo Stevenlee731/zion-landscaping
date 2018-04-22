@@ -1,11 +1,11 @@
-import React, {Component} from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
-import Img from 'gatsby-image'
+import React, {Component} from 'react';
+import Link from 'gatsby-link';
+import styled from 'styled-components';
+import Img from 'gatsby-image';
 import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 import {
   Paragraph, Overlay, Divider, HeaderOne, MaskHeader, HeaderTwo, ServiceContainer
-} from './../utils/ArticleComponents.js'
+} from './../utils/ArticleComponents.js';
 import { GalleryContainer } from './../utils/Gallery.js';
 
 class IndexPage extends Component {
@@ -14,17 +14,6 @@ class IndexPage extends Component {
 
     this.state = {
       gallery: []
-    }
-  }
-
-  async componentDidMount() {
-    try {
-      const res = await fetch('https://res.cloudinary.com/stevelee/image/list/front-yard.json')
-      const gallery = await res.json()
-      this.setState({gallery: gallery.resources})
-    }
-    catch(error) {
-      console.log(error)
     }
   }
 
