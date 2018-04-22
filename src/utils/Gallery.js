@@ -5,27 +5,7 @@ import { virtualize, autoPlay } from 'react-swipeable-views-utils';
 import Img from 'gatsby-image'
 import { HeaderTwo, positionAlignment } from './ArticleComponents';
 import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
-import Carousel from 'nuka-carousel';
 
-export class Gallery extends Component {
-  render() {
-    return (
-      // <CloudinaryContext cloudName="stevelee">
-        <Carousel>
-            {
-              this.props.gallery.map((data, key) => {
-                  return (
-                      <div >
-                          steve lee
-                      </div>
-                  )
-              })
-            }
-        </Carousel>
-      // </CloudinaryContext>
-    );
-  }
-}
 const AutoPlaySwipe = autoPlay(SwipeableViews)
 
 // const styles = {
